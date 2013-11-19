@@ -4,14 +4,13 @@
 %define release %mkrel 1
 
 Name: %{name}
-Version: %{version}
-Release: %{release}
+Version: 1.2.1
+Release: 1
 Summary:        A Django app that provides helpers for serving static files
 Group:          Development/Python
 License:        BSD
 URL:            http://bitbucket.org/jezdez/django-authority/
-Source:         %{realname}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
+Source:         https://pypi.python.org/packages/source/d/django-staticfiles/django-staticfiles-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools
 Requires:       python-django
@@ -28,11 +27,9 @@ find . -name \*.buildinfo* -exec rm {} +
 %{__python} setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
+%{__python} setup.py install -O1 --skip-build --root %{buildroot}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
@@ -44,4 +41,5 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Nov 02 2010 Ahmad Samir <ahmadsamir@mandriva.org> 0.3.2-1mdv2011.0
 + Revision: 591974
 - import python-django-staticfiles
+
 
