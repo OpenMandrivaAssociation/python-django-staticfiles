@@ -1,11 +1,11 @@
 %define realname    django-staticfiles
 %define name	    python-%{realname}
 %define version 0.3.2
-%define release %mkrel 1
+%define release 2
 
 Name: %{name}
 Version: 1.2.1
-Release: 1
+Release: 2
 Summary:        A Django app that provides helpers for serving static files
 Group:          Development/Python
 License:        BSD
