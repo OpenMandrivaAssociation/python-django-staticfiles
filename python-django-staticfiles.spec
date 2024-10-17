@@ -9,7 +9,7 @@ Release: 2
 Summary:        A Django app that provides helpers for serving static files
 Group:          Development/Python
 License:        BSD
-URL:            http://bitbucket.org/jezdez/django-authority/
+URL:            https://bitbucket.org/jezdez/django-authority/
 Source:         https://pypi.python.org/packages/source/d/django-staticfiles/django-staticfiles-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools
